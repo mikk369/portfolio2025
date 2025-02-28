@@ -72,7 +72,7 @@ function App() {
               <i className="fa-brands fa-github"></i>
             </a>
           </li>
-          <li className="nav-item">[work]</li>
+          <li className="nav-item"><a href="#work">[work]</a></li>
         </ul>
       </div>
       <div className="welcome-text">
@@ -80,12 +80,13 @@ function App() {
       </div>
         <div className="section">
           <div className="animation-section">
+            [ANIMATION SECTION IN THE MAKING]
           </div>
         </div>
-        <div className="section">
+        <div className="section" id='work'>
           <div className="project-grid">
             <div className="project-card">
-              <img src="project-img.jpg" alt="project image" />
+              <img src="project-1.webp" alt="project image" />
               <p className="project-intro">Project description</p>
               <div className="footer">
                 <button className="details">Details</button>
@@ -93,7 +94,7 @@ function App() {
               </div>
             </div>
             <div className="project-card">
-              <img src="project-img.jpg" alt="project image" />
+              <img src="project-2.webp" alt="project image" />
               <p className="project-intro">Project description</p>
               <div className="footer">
                 <button className="details">Details</button>
@@ -101,15 +102,90 @@ function App() {
               </div>
             </div>
             <div className="project-card">
-              <img src="project-img.jpg" alt="project image" />
+              <img src="foodtemp.webp" alt="project image" />
               <div className="project-intro">Project description</div>
-              <div className="project-details">
+              {/* <div className="project-details">
                 <div className="project-tech">
-                  <img src="javascript.svg" alt="used technology" />
+                  <img className='tech-img' src="javascript.svg" alt="used technology" />
                   <img src="html-5.svg" alt="used technology" />
                   <img src="css-3.svg" alt="used technology" />
                 </div>
+              </div> */}
+              <div className="footer">
+                <button className="details">Details</button>
+                <button className="live">Live</button>
               </div>
+            </div>
+            <div className="project-card">
+              <img src="movap.webp" alt="project image" />
+              <div className="project-intro">Project description</div>
+              {/* <div className="project-details">
+                <div className="project-tech">
+                  <img className='tech-img' src="javascript.svg" alt="used technology" />
+                  <img src="html-5.svg" alt="used technology" />
+                  <img src="css-3.svg" alt="used technology" />
+                </div>
+              </div> */}
+              <div className="footer">
+                <button className="details">Details</button>
+                <button className="live">Live</button>
+              </div>
+            </div>
+            <div className="project-card">
+              <img src="webcodes.webp" alt="project image" />
+              <div className="project-intro">Project description</div>
+              {/* <div className="project-details">
+                <div className="project-tech">
+                  <img className='tech-img' src="javascript.svg" alt="used technology" />
+                  <img src="html-5.svg" alt="used technology" />
+                  <img src="css-3.svg" alt="used technology" />
+                </div>
+              </div> */}
+              <div className="footer">
+                <button className="details">Details</button>
+                <button className="live">Live</button>
+              </div>
+            </div>
+            <div className="project-card">
+              <img src="warehouse.webp" alt="project image" />
+              <div className="project-intro">Project description</div>
+              {/* <div className="project-details">
+                <div className="project-tech">
+                  <img className='tech-img' src="javascript.svg" alt="used technology" />
+                  <img src="html-5.svg" alt="used technology" />
+                  <img src="css-3.svg" alt="used technology" />
+                </div>
+              </div> */}
+              <div className="footer">
+                <button className="details">Details</button>
+                <button className="live">Live</button>
+              </div>
+            </div>
+            <div className="project-card">
+              <img src="onlineshop.webp" alt="project image" />
+              <div className="project-intro">Project description</div>
+              {/* <div className="project-details">
+                <div className="project-tech">
+                  <img className='tech-img' src="javascript.svg" alt="used technology" />
+                  <img src="html-5.svg" alt="used technology" />
+                  <img src="css-3.svg" alt="used technology" />
+                </div>
+              </div> */}
+              <div className="footer">
+                <button className="details">Details</button>
+                <button className="live">Live</button>
+              </div>
+            </div>
+            <div className="project-card">
+              <img src="lohvik.webp" alt="project image" />
+              <div className="project-intro">Project description</div>
+              {/* <div className="project-details">
+                <div className="project-tech">
+                  <img className='tech-img' src="javascript.svg" alt="used technology" />
+                  <img src="html-5.svg" alt="used technology" />
+                  <img src="css-3.svg" alt="used technology" />
+                </div>
+              </div> */}
               <div className="footer">
                 <button className="details">Details</button>
                 <button className="live">Live</button>
