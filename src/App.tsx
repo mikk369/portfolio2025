@@ -1,8 +1,9 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import './general.css'
 
 function App() {
+  const [showDetails, setShowDetails] = useState<number | null>(null);
 
   useEffect(() => {
 
@@ -52,8 +53,14 @@ function App() {
       typeNextLine();
     }
   
-    typeWriter();
+    // typeWriter();
   }, []);
+
+const toggleDetails = (i: any) => {
+  const buttons = document.querySelectorAll('.details');
+  const index = Array.from(buttons).indexOf(i.target);
+  setShowDetails(showDetails === index ? null : index);
+}
 
   return (
     <>
@@ -87,107 +94,192 @@ function App() {
           <div className="project-grid">
             <div className="project-card">
               <img src="project-1.webp" alt="project image" />
-              <p className="project-intro">Project description</p>
-              <div className="footer">
-                <button className="details">Details</button>
-                <button className="live">Live</button>
-              </div>
-            </div>
-            <div className="project-card">
-              <img src="project-2.webp" alt="project image" />
-              <p className="project-intro">Project description</p>
-              <div className="footer">
-                <button className="details">Details</button>
-                <button className="live">Live</button>
-              </div>
-            </div>
-            <div className="project-card">
-              <img src="foodtemp.webp" alt="project image" />
-              <div className="project-intro">Project description</div>
-              {/* <div className="project-details">
-                <div className="project-tech">
-                  <img className='tech-img' src="javascript.svg" alt="used technology" />
-                  <img src="html-5.svg" alt="used technology" />
-                  <img src="css-3.svg" alt="used technology" />
+              {showDetails === 0 ? (
+                <div className="project-details">
+                  <div className="project-tech">
+                    <img src="wordpress.svg" alt="used technology" />
+                    <img src="elementorLogo.svg" alt="used technology" />
+                  </div>
+                  <p className="tech-description">Created with Wordpress & Elementor</p>
                 </div>
-              </div> */}
+              ) : (
+                <p className="project-intro">Paide kindergarten</p>
+              )}
               <div className="footer">
-                <button className="details">Details</button>
+                <button className="details" onClick={toggleDetails}>Details</button>
                 <button className="live">Live</button>
               </div>
             </div>
             <div className="project-card">
-              <img src="movap.webp" alt="project image" />
-              <div className="project-intro">Project description</div>
-              {/* <div className="project-details">
-                <div className="project-tech">
-                  <img className='tech-img' src="javascript.svg" alt="used technology" />
-                  <img src="html-5.svg" alt="used technology" />
-                  <img src="css-3.svg" alt="used technology" />
-                </div>
-              </div> */}
-              <div className="footer">
-                <button className="details">Details</button>
-                <button className="live">Live</button>
+              <div className="video-container">
+                <video className='video' autoPlay loop muted>
+                 <source src='calendar.mp4' type='video/mp4' />
+                </video>
               </div>
-            </div>
-            <div className="project-card">
-              <img src="webcodes.webp" alt="project image" />
-              <div className="project-intro">Project description</div>
-              {/* <div className="project-details">
-                <div className="project-tech">
-                  <img className='tech-img' src="javascript.svg" alt="used technology" />
-                  <img src="html-5.svg" alt="used technology" />
-                  <img src="css-3.svg" alt="used technology" />
+              {showDetails === 1 ? (
+                <div className="project-details">
+                  <div className="project-tech">
+                    <img src="js-logo.svg" alt="used technology" />
+                    <img src="react-logo.svg" alt="used technology" />
+                    <img src="vite-logo.svg" alt="used technology" />
+                    <img src="php-logo.svg" alt="used technology" />
+                    <img src="mysql-logo.svg" alt="used technology" />
+                    <img src="html-5.svg" alt="used technology" />
+                    <img src="css-3.svg" alt="used technology" />
+                    <img src="instagram-logo.webp" alt="used technology" />
+                  </div>
+                  <p className="tech-description">Including Instagram post API integration on news page</p>
                 </div>
-              </div> */}
+              ) : (
+                <p className="project-intro">Estonian Agility competition calendar</p>
+              )}
               <div className="footer">
-                <button className="details">Details</button>
-                <button className="live">Live</button>
-              </div>
-            </div>
-            <div className="project-card">
-              <img src="warehouse.webp" alt="project image" />
-              <div className="project-intro">Project description</div>
-              {/* <div className="project-details">
-                <div className="project-tech">
-                  <img className='tech-img' src="javascript.svg" alt="used technology" />
-                  <img src="html-5.svg" alt="used technology" />
-                  <img src="css-3.svg" alt="used technology" />
-                </div>
-              </div> */}
-              <div className="footer">
-                <button className="details">Details</button>
-                <button className="live">Live</button>
-              </div>
-            </div>
-            <div className="project-card">
-              <img src="onlineshop.webp" alt="project image" />
-              <div className="project-intro">Project description</div>
-              {/* <div className="project-details">
-                <div className="project-tech">
-                  <img className='tech-img' src="javascript.svg" alt="used technology" />
-                  <img src="html-5.svg" alt="used technology" />
-                  <img src="css-3.svg" alt="used technology" />
-                </div>
-              </div> */}
-              <div className="footer">
-                <button className="details">Details</button>
+                <button className="details" onClick={toggleDetails}>Details</button>
                 <button className="live">Live</button>
               </div>
             </div>
             <div className="project-card">
               <img src="lohvik.webp" alt="project image" />
-              <div className="project-intro">Project description</div>
-              {/* <div className="project-details">
-                <div className="project-tech">
-                  <img className='tech-img' src="javascript.svg" alt="used technology" />
-                  <img src="html-5.svg" alt="used technology" />
-                  <img src="css-3.svg" alt="used technology" />
+              {showDetails === 2 ? (
+                <div className="project-details">
+                  <div className="project-tech">
+                    <img src="wordpress.svg" alt="used technology" />
+                    <img src="js-logo.svg" alt="used technology" />
+                    <img src="react-logo.svg" alt="used technology" />
+                    <img src="html-5.svg" alt="used technology" />
+                    <img src="css-3.svg" alt="used technology" />
+                    <img src="css-3.svg" alt="used technology" />
+                    <img src="facebook-logo.webp" alt="used technology" />
+                  </div>
+                  <p className="tech-description">
+                    Including menu image change from wordpress admin panel and facebook post API integration
+                  </p>
                 </div>
-              </div> */}
+              ) : (
+                <p className="project-intro">Experimental learning cafe</p>
+              )}
               <div className="footer">
-                <button className="details">Details</button>
+                <button className="details" onClick={toggleDetails}>Details</button>
+                <button className="live">Live</button>
+              </div>
+            </div>
+            <div className="project-card">
+              <img src="webcodes.webp" alt="project image" />
+              {showDetails === 3 ? (
+                <div className="project-details">
+                  <div className="project-tech">
+                    <img src="js-logo.svg" alt="used technology" />
+                    <img src="php-logo.svg" alt="used technology" />
+                    <img src="html-5.svg" alt="used technology" />
+                    <img src="css-3.svg" alt="used technology" />
+                  </div>
+                  <p className="tech-description">Navbar created with Javascript & contact form with PHP</p>
+                </div>
+              ) : (
+                <p className="project-intro">Webcodes OÜ company webpage</p>
+              )}
+              <div className="footer">
+                <button className="details" onClick={toggleDetails}>Details</button>
+                <button className="live">Live</button>
+              </div>
+            </div>
+            <div className="project-card">
+              <img src="project-2.webp" alt="project image" />
+              {showDetails === 4 ? (
+                <div className="project-details">
+                  <div className="project-tech">
+                    <img src="vuejs.svg" alt="used technology" />
+                    <img src="vite-logo.svg" alt="used technology" />
+                    <img src="js-logo.svg" alt="used technology" />
+                    <img src="html-5.svg" alt="used technology" />
+                    <img src="css-3.svg" alt="used technology" />
+                    <img src="nodejs.svg" alt="used technology" />
+                    <img src="express-js.webp" alt="used technology" />
+                    <img src="mysql-logo.svg" alt="used technology" />
+                  </div>
+                  <p className="tech-description">FullStack project for adding recipes with creating account</p>
+                </div>
+              ) : (
+                <p className="project-intro">Project description SEE</p>
+              )}
+              <div className="footer">
+                <button className="details" onClick={toggleDetails}>Details</button>
+                <button className="live">Live</button>
+              </div>
+            </div>
+            <div className="project-card">
+              <img src="foodtemp.webp" alt="project image" />
+              {showDetails === 5 ? (
+                <div className="project-details">
+                  <div className="project-tech">
+                    <img src="js-logo.svg" alt="used technology" />
+                    <img src="html-5.svg" alt="used technology" />
+                    <img src="css-3.svg" alt="used technology" />
+                  </div>
+                  <p className="tech-description">Template for food page</p>
+                </div>
+              ) : (
+                <p className="project-intro">Frontend project</p>
+              )}
+              <div className="footer">
+                <button className="details" onClick={toggleDetails}>Details</button>
+                <button className="live">Live</button>
+              </div>
+            </div>
+            <div className="project-card">
+              <img src="movap.webp" alt="project image" />
+              {showDetails === 6 ? (
+                <div className="project-details">
+                  <div className="project-tech">
+                    <img src="js-logo.svg" alt="used technology" />
+                    <img src="html-5.svg" alt="used technology" />
+                    <img src="css-3.svg" alt="used technology" />
+                  </div>
+                  <p className="tech-description">Latest movies search</p>
+                </div>
+              ) : (
+                <p className="project-intro">Movie info & search for movies from API</p>
+              )}
+              <div className="footer">
+                <button className="details" onClick={toggleDetails}>Details</button>
+                <button className="live">Live</button>
+              </div>
+            </div>
+            <div className="project-card">
+              <img src="warehouse.webp" alt="project image" />
+              {showDetails === 7 ? (
+                <div className="project-details">
+                  <div className="project-tech">
+                    <img src="react-logo.svg" alt="used technology" />
+                    <img src="php-logo.svg" alt="used technology" />
+                  </div>
+                  <p className="tech-description">Had to create project with React and PHP</p>
+                </div>
+              ) : (
+                <p className="project-intro">Practical assignment for internship</p>
+              )}
+              <div className="footer">
+                <button className="details" onClick={toggleDetails}>Details</button>
+                <button className="live">Live</button>
+              </div>
+            </div>
+            <div className="project-card">
+              <img src="onlineshop.webp" alt="project image" />
+              {showDetails === 8 ? (
+                <div className="project-details">
+                  <div className="project-tech">
+                    <img src="js-logo.svg" alt="used technology" />
+                    <img src="html-5.svg" alt="used technology" />
+                    <img src="css-3.svg" alt="used technology" />
+                    <img src="stripe-logo.webp" alt="used technology" />
+                  </div>
+                  <p className="tech-description">Main purpouse was to integrating Stripe with page</p>
+                </div>
+              ) : (
+                <p className="project-intro">Simple e-shop with Stripe integration</p>
+              )}
+              <div className="footer">
+                <button className="details" onClick={toggleDetails}>Details</button>
                 <button className="live">Live</button>
               </div>
             </div>
