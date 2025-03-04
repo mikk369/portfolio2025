@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import './App.css'
-import './general.css'
+
 
 function App() {
   const [showDetails, setShowDetails] = useState<number | null>(null);
