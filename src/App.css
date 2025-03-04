@@ -66,6 +66,8 @@ body {
 .welcome-text {
   height: 90px;
 }
+
+
 .typing-line {
   overflow: hidden;
   white-space: nowrap;
@@ -170,6 +172,11 @@ body {
 
 .footer a {
   text-decoration: none;
+  color: #ffc107;
+}
+
+.footer a:visited, .footer a:active {
+  color: #ffc107;
 }
 
 .tech-description {
