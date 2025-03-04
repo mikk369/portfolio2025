@@ -53,7 +53,7 @@ function App() {
       typeNextLine();
     }
   
-    // typeWriter();
+    typeWriter();
   }, []);
 
 const toggleDetails = (i: any) => {
@@ -100,14 +100,16 @@ const toggleDetails = (i: any) => {
                     <img src="wordpress.svg" alt="used technology" />
                     <img src="elementorLogo.svg" alt="used technology" />
                   </div>
-                  <p className="tech-description">Created with Wordpress & Elementor</p>
+                  <p className="tech-description">Created with Wordpress & Elementor.</p>
                 </div>
               ) : (
                 <p className="project-intro">Paide kindergarten</p>
               )}
               <div className="footer">
                 <button className="details" onClick={toggleDetails}>Details</button>
-                <button className="live">Live</button>
+                <a href="https://www.pailasteaed.ee/" target="_blank" rel="noopener noreferrer">
+                  Live!
+                </a>
               </div>
             </div>
             <div className="project-card">
@@ -128,14 +130,17 @@ const toggleDetails = (i: any) => {
                     <img src="css-3.svg" alt="used technology" />
                     <img src="instagram-logo.webp" alt="used technology" />
                   </div>
-                  <p className="tech-description">Including Instagram post API integration on news page</p>
+                  <p className="tech-description">Including admin page for managin bookings & creating club events, 
+                    Instagram post API integration on news page & on latest news.</p>
                 </div>
               ) : (
                 <p className="project-intro">Estonian Agility competition calendar</p>
               )}
               <div className="footer">
                 <button className="details" onClick={toggleDetails}>Details</button>
-                <button className="live">Live</button>
+                <a href="https://agilityliit.ee/voistluskalender/" target="_blank" rel="noopener noreferrer">
+                  Live!
+                </a>
               </div>
             </div>
             <div className="project-card">
@@ -152,7 +157,7 @@ const toggleDetails = (i: any) => {
                     <img src="facebook-logo.webp" alt="used technology" />
                   </div>
                   <p className="tech-description">
-                    Including menu image change from wordpress admin panel and facebook post API integration
+                    Including menu image change from wordpress admin page and facebook post API integration.
                   </p>
                 </div>
               ) : (
@@ -160,7 +165,9 @@ const toggleDetails = (i: any) => {
               )}
               <div className="footer">
                 <button className="details" onClick={toggleDetails}>Details</button>
-                <button className="live">Live</button>
+                <a href="https://lohvik.webcodes.ee/" target="_blank" rel="noopener noreferrer">
+                  Live!
+                </a>
               </div>
             </div>
             <div className="project-card">
@@ -173,14 +180,16 @@ const toggleDetails = (i: any) => {
                     <img src="html-5.svg" alt="used technology" />
                     <img src="css-3.svg" alt="used technology" />
                   </div>
-                  <p className="tech-description">Navbar created with Javascript & contact form with PHP</p>
+                  <p className="tech-description">Navbar created with Javascript & contact form with PHP.</p>
                 </div>
               ) : (
                 <p className="project-intro">Webcodes OÜ company webpage</p>
               )}
               <div className="footer">
                 <button className="details" onClick={toggleDetails}>Details</button>
-                <button className="live">Live</button>
+                <a href="https://www.webcodes.ee/" target="_blank" rel="noopener noreferrer">
+                  Live!
+                </a>
               </div>
             </div>
             <div className="project-card">
@@ -197,14 +206,16 @@ const toggleDetails = (i: any) => {
                     <img src="express-js.webp" alt="used technology" />
                     <img src="mysql-logo.svg" alt="used technology" />
                   </div>
-                  <p className="tech-description">FullStack project for adding recipes with creating account</p>
+                  <p className="tech-description">CRUD operations with recipes & creating/login account.</p>
                 </div>
               ) : (
-                <p className="project-intro">Project description SEE</p>
+                <p className="project-intro"> FullStack project</p>
               )}
               <div className="footer">
                 <button className="details" onClick={toggleDetails}>Details</button>
-                <button className="live">Live</button>
+                <a href="https://recipe.webcodes.ee/" target="_blank" rel="noopener noreferrer">
+                  Live!
+                </a>
               </div>
             </div>
             <div className="project-card">
@@ -216,14 +227,16 @@ const toggleDetails = (i: any) => {
                     <img src="html-5.svg" alt="used technology" />
                     <img src="css-3.svg" alt="used technology" />
                   </div>
-                  <p className="tech-description">Template for food page</p>
+                  <p className="tech-description">Template for food page.</p>
                 </div>
               ) : (
                 <p className="project-intro">Frontend project</p>
               )}
               <div className="footer">
                 <button className="details" onClick={toggleDetails}>Details</button>
-                <button className="live">Live</button>
+                <a href="https://foodgo.webcodes.ee/" target="_blank" rel="noopener noreferrer">
+                  Live!
+                </a>
               </div>
             </div>
             <div className="project-card">
@@ -235,14 +248,16 @@ const toggleDetails = (i: any) => {
                     <img src="html-5.svg" alt="used technology" />
                     <img src="css-3.svg" alt="used technology" />
                   </div>
-                  <p className="tech-description">Latest movies search</p>
+                  <p className="tech-description">Movie info & search from from API.</p>
                 </div>
               ) : (
-                <p className="project-intro">Movie info & search for movies from API</p>
+                <p className="project-intro">Latest movies search</p>
               )}
               <div className="footer">
                 <button className="details" onClick={toggleDetails}>Details</button>
-                <button className="live">Live</button>
+                <a href="https://moviesearch.webcodes.ee/" target="_blank" rel="noopener noreferrer">
+                  Live!
+                </a>
               </div>
             </div>
             <div className="project-card">
@@ -260,7 +275,9 @@ const toggleDetails = (i: any) => {
               )}
               <div className="footer">
                 <button className="details" onClick={toggleDetails}>Details</button>
-                <button className="live">Live</button>
+                <a href="https://warehouse.webcodes.ee/" target="_blank" rel="noopener noreferrer">
+                  Live!
+                </a>
               </div>
             </div>
             <div className="project-card">
@@ -280,7 +297,9 @@ const toggleDetails = (i: any) => {
               )}
               <div className="footer">
                 <button className="details" onClick={toggleDetails}>Details</button>
-                <button className="live">Live</button>
+                <a href="https://onlineshop.webcodes.ee/" target="_blank" rel="noopener noreferrer">
+                  Live!
+                </a>
               </div>
             </div>
           </div>

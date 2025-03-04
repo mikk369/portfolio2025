@@ -49,6 +49,10 @@ body {
   cursor: pointer;
 }
 
+.nav-item a {
+  text-decoration: none;
+}
+
 .nav-item :active, :visited {
   color: #ffc107;
 }
@@ -154,14 +158,17 @@ body {
 }
 
 .footer button {
-  background-color: #ffc107;
+  background: none;
+  color: #ffc107;
+  font-weight: inherit;
   border: none;
-  border-radius: 9px;
-  color: #113757;
-  padding: .5rem 1rem;
+  font-family: inherit;
   cursor: pointer;
 }
 
+.footer a {
+  text-decoration: none;
+}
 
 .tech-description {
   display: flex;
@@ -169,6 +176,7 @@ body {
   justify-content: center;
   margin: 1rem 1rem 0 1rem;
   font-size: 0.5rem;
+  line-height: 0.6rem;
 }
 
 .project-tech {
