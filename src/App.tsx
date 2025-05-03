@@ -279,28 +279,6 @@ const toggleDetails = (i: any) => {
                 </a>
               </div>
             </div>
-            <div className="project-card">
-              <img src="onlineshop.webp" alt="project image" />
-              {showDetails === 8 ? (
-                <div className="project-details">
-                  <div className="project-tech">
-                    <img src="js-logo.svg" alt="used technology" />
-                    <img src="html-5.svg" alt="used technology" />
-                    <img src="css-3.svg" alt="used technology" />
-                    <img src="stripe-logo.webp" alt="used technology" />
-                  </div>
-                  <p className="tech-description">Main purpouse was to integrating Stripe with page</p>
-                </div>
-              ) : (
-                <p className="project-intro">Simple e-shop with Stripe integration</p>
-              )}
-              <div className="footer">
-                <button className="details" onClick={toggleDetails}>Details</button>
-                <a href="https://onlineshop.webcodes.ee/" target="_blank" rel="noopener noreferrer">
-                  Live!
-                </a>
-              </div>
-            </div>
           </div>
         </div>
         <div className="page-footer">
